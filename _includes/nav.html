@@ -1,0 +1,11 @@
+<nav>
+  <a href="{{ site.baseurl }}/">← Home</a> |
+  {% for item in page.nav %}
+    {% if item.active %}
+      <strong>{{ item.name }}</strong>
+    {% else %}
+      <a href="{{ item.url }}">{{ item.name }}</a>
+    {% endif %}
+    {% unless forloop.last %} | {% endunless %}
+  {% endfor %}
+</nav>
