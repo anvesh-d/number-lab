@@ -1,28 +1,29 @@
 /* ==================================================
-   Number Lab — Exploratory Math Theme
-   Curious • Playful • Clean
+   Number Lab — Confident Math Aesthetic
+   Elegant • Intentional • Modern
    ================================================== */
 
 /* ---------- Variables ---------- */
 :root {
-  --bg-main: #fbfbfd;
-  --bg-surface: #ffffff;
-  --bg-soft: #f1f5f9;
+  --bg-page: #f6f7fb;
+  --bg-content: #ffffff;
+  --bg-header: #0f172a;
 
-  --text-main: #1e293b;
+  --text-main: #0f172a;
   --text-soft: #475569;
+  --text-invert: #e5e7eb;
 
-  --accent: #7c3aed;      /* playful violet */
-  --accent-light: #ede9fe;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
 
-  --border-soft: #e2e8f0;
+  --border-light: #e2e8f0;
 
   --font-body: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, Ubuntu, "Helvetica Neue",
                Arial, sans-serif;
 
-  --max-width: 900px;
-  --radius: 10px;
+  --max-width: 960px;
+  --radius: 8px;
 }
 
 /* ---------- Reset ---------- */
@@ -33,78 +34,89 @@
 body {
   margin: 0;
   font-family: var(--font-body);
-  line-height: 1.7;
-  background: var(--bg-main);
+  line-height: 1.75;
+  background: var(--bg-page);
   color: var(--text-main);
-}
-
-/* ---------- Layout ---------- */
-main {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
 }
 
 /* ---------- Header ---------- */
 .site-header {
-  background: linear-gradient(
-    to right,
-    var(--accent-light),
-    var(--bg-surface)
-  );
-  border-bottom: 1px solid var(--border-soft);
-  padding: 1.5rem 1.5rem 1.2rem;
+  background: var(--bg-header);
+  color: var(--text-invert);
+  padding: 2rem 1.5rem 1.6rem;
 }
 
 .site-title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
   letter-spacing: 0.3px;
-  color: var(--accent);
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 /* ---------- Navigation ---------- */
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  font-size: 0.95rem;
+  gap: 0.8rem;
 }
 
 .site-nav a,
 .site-nav span {
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
   text-decoration: none;
-  color: var(--text-soft);
-  background: transparent;
-  transition: background 0.15s ease;
+  font-size: 0.95rem;
+  color: var(--text-invert);
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  opacity: 0.75;
 }
 
 .site-nav a:hover {
-  background: var(--bg-soft);
-  color: var(--text-main);
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .nav-active {
   background: var(--accent);
   color: white;
   font-weight: 600;
+  opacity: 1;
+}
+
+/* ---------- Main Layout ---------- */
+main {
+  max-width: var(--max-width);
+  margin: -2.5rem auto 0;
+  padding: 2.5rem 2rem 4rem;
+  background: var(--bg-content);
+  border-radius: 14px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
 /* ---------- Headings ---------- */
 h1 {
-  margin: 0 0 1.5rem;
-  font-size: 2.4rem;
+  margin: 0 0 1.8rem;
+  font-size: 2.6rem;
   font-weight: 700;
 }
 
 h2 {
-  margin-top: 2.8rem;
+  margin-top: 3rem;
   margin-bottom: 0.8rem;
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   font-weight: 600;
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 0.4em;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
 }
 
 /* ---------- Text ---------- */
@@ -123,25 +135,16 @@ li {
 
 /* ---------- Sections ---------- */
 .section {
-  margin-top: 3rem;
-  padding-top: 1.2rem;
-  border-top: 2px dashed var(--border-soft);
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
 }
 
 /* ---------- Notes ---------- */
 .note {
-  margin: 1.8rem 0;
-  padding: 1.2rem 1.3rem;
-  background: var(--accent-light);
-  border-radius: var(--radius);
-  font-size: 0.95rem;
-}
-
-.warning {
-  margin: 1.8rem 0;
-  padding: 1.2rem 1.3rem;
-  background: #fff7ed;
-  border-left: 5px solid #f97316;
+  margin: 2rem 0;
+  padding: 1.4rem 1.6rem;
+  background: var(--accent-soft);
   border-radius: var(--radius);
   font-size: 0.95rem;
 }
@@ -152,32 +155,33 @@ li {
   color: var(--text-soft);
 }
 
-/* ---------- Explore Tools ---------- */
+/* ---------- Tools ---------- */
 .tool {
-  margin: 3rem 0;
-  padding: 1.6rem 1.6rem 1.8rem;
-  background: var(--bg-surface);
-  border-radius: var(--radius);
-  border: 1px solid var(--border-soft);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+  margin: 3.5rem 0;
+  padding: 1.8rem 2rem 2rem;
+  background: var(--bg-content);
+  border-radius: 14px;
+  border: 1px solid var(--border-light);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .tool-header {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 0.6rem;
   color: var(--accent);
+  margin-bottom: 0.6rem;
 }
 
 .tool-body {
-  margin-top: 0.8rem;
+  margin-top: 0.9rem;
 }
 
 /* ---------- Logic ---------- */
 .logic {
-  margin-top: 1.3rem;
-  padding-top: 1rem;
-  border-top: 2px dashed var(--border-soft);
+  margin-top: 1.6rem;
+  padding-top: 1.1rem;
+  border-top: 1px dashed var(--border-light);
   font-size: 0.9rem;
   color: var(--text-soft);
 }
@@ -188,10 +192,9 @@ li {
 
 /* ---------- Footer ---------- */
 footer {
-  background: var(--bg-soft);
-  border-top: 1px solid var(--border-soft);
-  padding: 1.5rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
   font-size: 0.85rem;
   color: var(--text-soft);
-  text-align: center;
 }
