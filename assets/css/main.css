@@ -138,3 +138,25 @@ footer {
 .hidden {
   display: none;
 }
+
+.site-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-muted);
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.site-nav a,
+.site-nav span {
+  margin-right: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.nav-active {
+  font-weight: 600;
+  color: var(--color-accent);
+}
