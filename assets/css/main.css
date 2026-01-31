@@ -76,3 +76,65 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
+
+
+/* ================================
+   Layer 2 — Structural Primitives
+   ================================ */
+
+/* Logical content sections */
+.section {
+  margin-top: 2.5rem;
+}
+
+/* Notes and clarifications */
+.note {
+  border-left: 4px solid var(--color-muted);
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  background: #fafafa;
+  font-size: 0.95rem;
+}
+
+.warning {
+  border-left: 4px solid var(--color-accent);
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  background: #fdf6f0;
+  font-size: 0.95rem;
+}
+
+/* Secondary information */
+.meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Explore tools (defined now, used later) */
+.tool {
+  border: 1px solid var(--color-muted);
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.tool-header {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.tool-body {
+  margin-top: 0.75rem;
+}
+
+/* Hidden logic / explanation */
+.logic {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
