@@ -1,0 +1,16 @@
+title: Prime Numbers
+slug: prime
+
+sections:
+  - id: overview
+    name: Overview
+    url: /numbers/prime/overview/
+  - id: insights
+    name: Insights
+    url: /numbers/prime/insights/
+  - id: explore
+    name: Explore
+    url: /numbers/prime/explore/
+  - id: facts
+    name: Facts
+    url: /numbers/prime/facts/
