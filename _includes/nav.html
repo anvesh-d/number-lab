@@ -1,11 +1,16 @@
-<nav>
-  <a href="{{ site.baseurl }}/">← Home</a> |
-  {% for item in page.nav %}
-    {% if item.active %}
-      <strong>{{ item.name }}</strong>
+{% assign parts = page.path | split: '/' %}
+{% assign number_id = parts[1] %}
+{% assign section = parts[2] %}
+{% assign ms = site.data.numbers[number_id] %}
+
+<nav class="site-nav">
+  <a class="home-link" href="{{ site.baseurl }}/">← Home</a>
+
+  {% for item in ms.sections %}
+    {% if item.id == section %}
+      <span class="nav-active">{{ item.name }}</span>
     {% else %}
-      <a href="{{ item.url }}">{{ item.name }}</a>
+      <a href="{{ site.baseurl }}{{ item.url }}">{{ item.name }}</a>
     {% endif %}
-    {% unless forloop.last %} | {% endunless %}
   {% endfor %}
 </nav>
