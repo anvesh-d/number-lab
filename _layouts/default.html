@@ -2,20 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
+
+  {% assign parts = page.path | split: '/' %}
+  {% assign number_id = parts[1] %}
+  {% assign section = parts[2] %}
+
+  <title>
+    {{ site.data.numbers[number_id].title }} · {{ section | capitalize }}
+  </title>
+
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 </head>
 <body>
 
-<header>
-  <div class="meta">
-    {{ page.number }}
+<header class="site-header">
+  <div class="site-title">
+    {{ site.data.numbers[number_id].title }}
   </div>
 
   {% include nav.html %}
 </header>
 
 <main>
+  <h1>{{ section | capitalize }}</h1>
   {{ content }}
 </main>
 
