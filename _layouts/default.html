@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+</head>
+<body>
+
+<header>
+  <div class="meta">
+    {{ page.number }}
+  </div>
+
+  {% include nav.html %}
+</header>
+
+<main>
+  {{ content }}
+</main>
+
+<footer>
+  <p>Number Lab</p>
+</footer>
+
+</body>
+</html>
