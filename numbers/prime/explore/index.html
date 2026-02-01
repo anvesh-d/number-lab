@@ -3,10 +3,13 @@ layout: default
 ---
 
 <p>
-Try out simple experiments with prime numbers.
-Change the inputs and see what happens.
+Experiment with prime numbers using simple interactive tools.
+Change the inputs and observe the patterns.
 </p>
 
+<!-- ========================= -->
+<!-- PRIME CHECK -->
+<!-- ========================= -->
 <div class="section">
   <h2>Prime Check</h2>
 
@@ -23,6 +26,110 @@ Change the inputs and see what happens.
   <button onclick="checkPrime()">Check</button>
 
   <div id="primeResult"></div>
+
+  <details>
+    <summary>View Code</summary>
+
+    <pre><code>
+// JavaScript
+function isPrime(n) {
+  if (n <= 1) return false;
+  if (n === 2) return true;
+  if (n % 2 === 0) return false;
+
+  for (let i = 3; i * i <= n; i += 2) {
+    if (n % i === 0) return false;
+  }
+  return true;
+}
+    </code></pre>
+  </details>
+</div>
+
+<!-- ========================= -->
+<!-- LIST PRIMES IN A RANGE -->
+<!-- ========================= -->
+<div class="section">
+  <h2>List Primes in a Range</h2>
+
+  <p>
+    Enter a start and end value to list all prime numbers in that range.
+  </p>
+
+  <input
+    type="number"
+    id="rangeStart"
+    placeholder="Start"
+  >
+
+  <input
+    type="number"
+    id="rangeEnd"
+    placeholder="End"
+  >
+
+  <button onclick="listPrimes()">List</button>
+
+  <div id="rangeResult"></div>
+
+  <details>
+    <summary>View Code</summary>
+
+    <pre><code>
+// JavaScript
+function listPrimesInRange(a, b) {
+  const primes = [];
+
+  for (let n = a; n <= b; n++) {
+    if (isPrime(n)) {
+      primes.push(n);
+    }
+  }
+
+  return primes;
+}
+    </code></pre>
+  </details>
+</div>
+
+<!-- ========================= -->
+<!-- COUNT PRIMES -->
+<!-- ========================= -->
+<div class="section">
+  <h2>Count Primes up to N</h2>
+
+  <p>
+    Enter a number N to count how many primes are less than or equal to N.
+  </p>
+
+  <input
+    type="number"
+    id="countInput"
+    placeholder="Enter N"
+  >
+
+  <button onclick="countPrimes()">Count</button>
+
+  <div id="countResult"></div>
+
+  <details>
+    <summary>View Code</summary>
+
+    <pre><code>
+// JavaScript
+function countPrimesUpTo(n) {
+  let count = 0;
+
+  for (let i = 2; i <= n; i++) {
+    if (isPrime(i)) {
+      count++;
+    }
+  }
+
+  return count;
+}
+    </code></pre>
+  </details>
 </div>
 
 <script src="{{ site.baseurl }}/assets/js/prime.js"></script>
