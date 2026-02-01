@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<p>
+Try out simple experiments with prime numbers.
+Change the inputs and see what happens.
+</p>
+
+<div class="section">
+  <h2>Prime Check</h2>
+
+  <p>
+    Enter a natural number to check whether it is prime.
+  </p>
+
+  <input
+    type="number"
+    id="primeInput"
+    placeholder="Enter a number"
+  >
+
+  <button onclick="checkPrime()">Check</button>
+
+  <div id="primeResult"></div>
+</div>
+
+<script src="{{ site.baseurl }}/assets/js/prime.js"></script>
