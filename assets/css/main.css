@@ -1,20 +1,18 @@
 /* ==================================================
-   Number Lab — Confident Math Aesthetic
-   Elegant • Intentional • Modern
+   Number Lab — Refined Exploratory Design
+   Confident • Curious • Designed
    ================================================== */
 
 /* ---------- Variables ---------- */
 :root {
-  --bg-page: #f6f7fb;
+  --bg-page: #f5f7fb;
   --bg-content: #ffffff;
-  --bg-header: #0f172a;
 
   --text-main: #0f172a;
   --text-soft: #475569;
-  --text-invert: #e5e7eb;
 
-  --accent: #2563eb;
-  --accent-soft: #dbeafe;
+  --accent-primary: #1d4ed8;   /* deep blue */
+  --accent-secondary: #f59e0b; /* warm amber */
 
   --border-light: #e2e8f0;
 
@@ -22,8 +20,8 @@
                "Segoe UI", Roboto, Ubuntu, "Helvetica Neue",
                Arial, sans-serif;
 
-  --max-width: 960px;
-  --radius: 8px;
+  --max-width: 940px;
+  --radius: 10px;
 }
 
 /* ---------- Reset ---------- */
@@ -34,117 +32,118 @@
 body {
   margin: 0;
   font-family: var(--font-body);
-  line-height: 1.75;
+  line-height: 1.65;
   background: var(--bg-page);
   color: var(--text-main);
 }
 
 /* ---------- Header ---------- */
 .site-header {
-  background: var(--bg-header);
-  color: var(--text-invert);
+  background: linear-gradient(
+    to bottom,
+    #0f172a,
+    #111827
+  );
+  color: white;
   padding: 2rem 1.5rem 1.6rem;
+  text-align: center;
 }
 
+/* Optional logo (future-proof) */
+.site-logo {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/* Site title */
 .site-title {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
   margin-bottom: 1rem;
 }
 
 /* ---------- Navigation ---------- */
 .site-nav {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.6rem;
 }
 
 .site-nav a,
 .site-nav span {
   text-decoration: none;
   font-size: 0.95rem;
-  color: var(--text-invert);
-  padding: 0.35rem 0.7rem;
-  border-radius: 6px;
-  opacity: 0.75;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.15s ease;
 }
 
 .site-nav a:hover {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .nav-active {
-  background: var(--accent);
-  color: white;
+  background: var(--accent-secondary);
+  color: #111827;
   font-weight: 600;
-  opacity: 1;
+  border-color: var(--accent-secondary);
 }
 
 /* ---------- Main Layout ---------- */
 main {
   max-width: var(--max-width);
   margin: -2.5rem auto 0;
-  padding: 2.5rem 2rem 4rem;
+  padding: 2.2rem 2rem 3rem;
   background: var(--bg-content);
   border-radius: 14px;
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.06);
+    0 18px 35px rgba(0, 0, 0, 0.06);
 }
 
 /* ---------- Headings ---------- */
 h1 {
-  margin: 0 0 1.8rem;
-  font-size: 2.6rem;
+  margin: 0 0 1.2rem;
+  font-size: 2.4rem;
   font-weight: 700;
 }
 
 h2 {
-  margin-top: 3rem;
-  margin-bottom: 0.8rem;
-  font-size: 1.6rem;
+  margin-top: 2.4rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  position: relative;
-}
-
-h2::before {
-  content: "";
-  position: absolute;
-  left: -1.5rem;
-  top: 0.4em;
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  border-radius: 50%;
 }
 
 /* ---------- Text ---------- */
 p {
-  margin: 0.9rem 0;
-  color: var(--text-main);
+  margin: 0.7rem 0;
 }
 
 ul {
-  margin: 0.6rem 0 0.6rem 1.4rem;
+  margin: 0.5rem 0 0.5rem 1.3rem;
 }
 
 li {
-  margin: 0.35rem 0;
+  margin: 0.3rem 0;
 }
 
 /* ---------- Sections ---------- */
 .section {
-  margin-top: 3.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-light);
+  margin-top: 2.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--border-light);
 }
 
 /* ---------- Notes ---------- */
 .note {
-  margin: 2rem 0;
-  padding: 1.4rem 1.6rem;
-  background: var(--accent-soft);
+  margin: 1.6rem 0;
+  padding: 1.1rem 1.3rem;
+  background: #f8fafc;
+  border-left: 5px solid var(--accent-primary);
   border-radius: var(--radius);
   font-size: 0.95rem;
 }
@@ -155,32 +154,30 @@ li {
   color: var(--text-soft);
 }
 
-/* ---------- Tools ---------- */
+/* ---------- Explore Tools ---------- */
 .tool {
-  margin: 3.5rem 0;
-  padding: 1.8rem 2rem 2rem;
+  margin: 2.8rem 0;
+  padding: 1.6rem 1.8rem;
   background: var(--bg-content);
-  border-radius: 14px;
+  border-radius: var(--radius);
   border: 1px solid var(--border-light);
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .tool-header {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 0.6rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
 }
 
 .tool-body {
-  margin-top: 0.9rem;
+  margin-top: 0.7rem;
 }
 
 /* ---------- Logic ---------- */
 .logic {
-  margin-top: 1.6rem;
-  padding-top: 1.1rem;
+  margin-top: 1.2rem;
+  padding-top: 0.8rem;
   border-top: 1px dashed var(--border-light);
   font-size: 0.9rem;
   color: var(--text-soft);
@@ -192,9 +189,16 @@ li {
 
 /* ---------- Footer ---------- */
 footer {
-  margin-top: 4rem;
-  padding: 2rem;
+  margin-top: 3.5rem;
+  padding: 2rem 1.5rem;
   text-align: center;
   font-size: 0.85rem;
   color: var(--text-soft);
+}
+
+footer::before {
+  content: "Number Lab · Exploring Mathematics Through Ideas";
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
 }
