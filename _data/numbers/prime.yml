@@ -11,6 +11,9 @@ sections:
   - id: explore
     name: Explore
     url: /numbers/prime/explore/
+  - id: codebook
+    name: Codebook
+    url: /numbers/prime/codebook/
   - id: facts
     name: Facts
     url: /numbers/prime/facts/
