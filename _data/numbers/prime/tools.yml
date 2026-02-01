@@ -1,0 +1,11 @@
+- id: check
+  name: Prime Check
+  description: Check whether a number is prime.
+
+- id: range
+  name: List Primes in a Range
+  description: List all prime numbers between two values.
+
+- id: count
+  name: Count Primes
+  description: Count how many primes are less than or equal to N.
