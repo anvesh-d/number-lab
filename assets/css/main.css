@@ -178,3 +178,14 @@ footer {
   text-align: center;
   background: var(--bg-content);
 }
+
+/* ---------- Navigation visibility fix ---------- */
+.site-header {
+  position: relative;
+  z-index: 10;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
