@@ -1,0 +1,15 @@
+id: check
+title: Prime Check
+description: Check whether a given natural number is prime.
+
+inputs:
+  - id: primeInput
+    type: number
+    placeholder: Enter a number
+
+button:
+  text: Check
+  action: checkPrime
+
+output:
+  id: primeResult
