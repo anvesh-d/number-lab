@@ -29,7 +29,7 @@
 body {
   margin: 0;
   font-family: var(--font-body);
-  line-height: 1.6; /* unchanged */
+  line-height: 1.55; /* slightly tighter */
   background: var(--bg-page);
   color: var(--text-main);
 }
@@ -38,8 +38,8 @@ body {
 .site-header {
   background: var(--bg-content);
   border-bottom: 2px solid var(--border-light);
-  padding: 1.2rem 1rem;   /* slightly reduced */
-  text-align: center;     /* CHANGE #1 */
+  padding: 0.9rem 1rem;   /* tighter */
+  text-align: center;
 }
 
 .site-title {
@@ -47,22 +47,22 @@ body {
   font-weight: 700;
   letter-spacing: 0.3px;
   color: var(--accent);
-  margin-bottom: 0.5rem;  /* slightly reduced */
+  margin-bottom: 0.4rem;  /* tighter */
 }
 
 /* ---------- Navigation ---------- */
 .site-nav {
   display: flex;
-  justify-content: center; /* CHANGE #1 */
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 0.4rem;             /* slightly reduced */
+  gap: 0.35rem; /* tighter */
 }
 
 .site-nav a,
 .site-nav span {
   text-decoration: none;
   font-size: 0.9rem;
-  padding: 0.25rem 0.6rem;
+  padding: 0.22rem 0.55rem; /* tighter */
   border-radius: 4px;
   color: var(--text-soft);
 }
@@ -80,21 +80,21 @@ body {
 /* ---------- Main ---------- */
 main {
   max-width: var(--max-width);
-  margin: 1.3rem auto 0;     /* slightly reduced */
-  padding: 1.6rem 1.4rem 2.3rem; /* slightly reduced */
+  margin: 1.1rem auto 0;      /* tighter */
+  padding: 1.4rem 1.3rem 2.1rem; /* tighter */
   background: var(--bg-content);
 }
 
 /* ---------- Headings ---------- */
 h1 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.85rem; /* tighter */
   font-size: 2.1rem;
   font-weight: 700;
 }
 
 h2 {
-  margin-top: 1.8rem;
-  margin-bottom: 0.4rem;
+  margin-top: 1.6rem;  /* tighter */
+  margin-bottom: 0.35rem;
   font-size: 1.35rem;
   font-weight: 600;
   color: var(--accent);
@@ -102,28 +102,28 @@ h2 {
 
 /* ---------- Text ---------- */
 p {
-  margin: 0.55rem 0;
+  margin: 0.45rem 0; /* tighter */
 }
 
 ul {
-  margin: 0.4rem 0 0.4rem 1.2rem;
+  margin: 0.35rem 0 0.35rem 1.2rem;
 }
 
 li {
-  margin: 0.2rem 0;
+  margin: 0.18rem 0;
 }
 
 /* ---------- Sections ---------- */
 .section {
-  margin-top: 1.8rem;
-  padding-top: 0.8rem;
+  margin-top: 1.6rem;  /* tighter */
+  padding-top: 0.65rem;
   border-top: 1px solid var(--border-light);
 }
 
 /* ---------- Notes ---------- */
 .note {
-  margin: 1.2rem 0;
-  padding: 0.9rem 1.1rem;
+  margin: 1rem 0; /* tighter */
+  padding: 0.85rem 1.05rem;
   background: #f0fdfa;
   border-left: 4px solid var(--accent);
   font-size: 0.9rem;
@@ -137,8 +137,8 @@ li {
 
 /* ---------- Tools ---------- */
 .tool {
-  margin: 2rem 0;
-  padding: 1.2rem 1.4rem;
+  margin: 1.8rem 0; /* tighter */
+  padding: 1.15rem 1.35rem;
   border: 1px solid var(--border-light);
 }
 
@@ -150,13 +150,13 @@ li {
 }
 
 .tool-body {
-  margin-top: 0.5rem;
+  margin-top: 0.45rem;
 }
 
 /* ---------- Logic ---------- */
 .logic {
-  margin-top: 0.8rem;
-  padding-top: 0.6rem;
+  margin-top: 0.7rem;
+  padding-top: 0.55rem;
   border-top: 1px dashed var(--border-light);
   font-size: 0.85rem;
   color: var(--text-soft);
@@ -169,7 +169,7 @@ li {
 /* ---------- Footer ---------- */
 footer {
   border-top: 1px solid var(--border-light);
-  padding: 1.2rem;
+  padding: 1.1rem; /* tighter */
   font-size: 0.8rem;
   color: var(--text-soft);
   text-align: center;
