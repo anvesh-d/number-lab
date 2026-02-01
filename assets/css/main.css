@@ -7,20 +7,20 @@
   --bg-page: #f6f7fb;
   --bg-content: #ffffff;
 
-  --text-main: #0f172a;
-  --text-soft: #475569;
+  --text-main: #111827;
+  --text-soft: #4b5563;
 
-  --accent-primary: #2563eb;   /* confident blue */
-  --accent-secondary: #e11d48; /* subtle energy */
+  --accent-primary: #2563eb;
+  --accent-secondary: #9333ea;
 
-  --border-light: #e2e8f0;
+  --border-light: #e5e7eb;
 
   --font-body: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, Ubuntu, "Helvetica Neue",
                Arial, sans-serif;
 
   --max-width: 900px;
-  --radius: 8px;
+  --radius: 6px;
 }
 
 /* ---------- Reset ---------- */
@@ -39,30 +39,30 @@ body {
 /* ---------- Header ---------- */
 .site-header {
   background: var(--bg-content);
-  border-bottom: 2px solid var(--border-light);
-  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.25rem 1.5rem;
 }
 
 .site-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent-primary);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
 /* ---------- Navigation ---------- */
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .site-nav a,
 .site-nav span {
   text-decoration: none;
   font-size: 0.95rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
   color: var(--text-soft);
 }
 
@@ -73,14 +73,14 @@ body {
 
 .nav-active {
   background: var(--accent-primary);
-  color: white;
+  color: #ffffff;
   font-weight: 600;
 }
 
 /* ---------- Main ---------- */
 main {
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: 1.5rem auto 0;
   padding: 2rem 1.5rem 3rem;
   background: var(--bg-content);
 }
@@ -93,9 +93,9 @@ h1 {
 }
 
 h2 {
-  margin-top: 2.4rem;
+  margin-top: 2.2rem;
   margin-bottom: 0.6rem;
-  font-size: 1.45rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--accent-secondary);
 }
@@ -106,7 +106,7 @@ p {
 }
 
 ul {
-  margin: 0.5rem 0 0.5rem 1.3rem;
+  margin: 0.5rem 0 0.5rem 1.25rem;
 }
 
 li {
@@ -115,17 +115,17 @@ li {
 
 /* ---------- Sections ---------- */
 .section {
-  margin-top: 2.2rem;
+  margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid var(--border-light);
 }
 
 /* ---------- Notes ---------- */
 .note {
-  margin: 1.5rem 0;
+  margin: 1.4rem 0;
   padding: 1rem 1.2rem;
-  background: #f8fafc;
-  border-left: 5px solid var(--accent-primary);
+  background: #f9fafb;
+  border-left: 4px solid var(--accent-primary);
   border-radius: var(--radius);
   font-size: 0.95rem;
 }
@@ -138,7 +138,7 @@ li {
 
 /* ---------- Tools ---------- */
 .tool {
-  margin: 2.5rem 0;
+  margin: 2.4rem 0;
   padding: 1.4rem 1.6rem;
   background: var(--bg-content);
   border: 1px solid var(--border-light);
@@ -171,21 +171,11 @@ li {
 
 /* ---------- Footer ---------- */
 footer {
-  border-top: 1px solid var(--border-light);
+  margin-top: 2.5rem;
   padding: 1.5rem;
   font-size: 0.85rem;
   color: var(--text-soft);
   text-align: center;
   background: var(--bg-content);
-}
-
-/* ---------- Navigation visibility fix ---------- */
-.site-header {
-  position: relative;
-  z-index: 10;
-}
-
-main {
-  position: relative;
-  z-index: 1;
+  border-top: 1px solid var(--border-light);
 }
