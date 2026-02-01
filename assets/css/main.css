@@ -43,6 +43,7 @@ body {
   background: var(--bg-header);
   color: var(--text-invert);
   padding: 1.8rem 1.5rem 1.4rem;
+  text-align: center;
 }
 
 .site-title {
@@ -58,6 +59,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+  justify-content: center;
 }
 
 .site-nav a,
