@@ -1,0 +1,52 @@
+{% assign tool = include.tool %}
+{% assign tool_id = tool.id %}
+{% assign base = site.data.numbers.prime.tools[tool_id] %}
+{% assign langs = base.langs %}
+
+<div class="section tool" data-tool="{{ tool_id }}">
+
+  <h2>{{ tool.title }}</h2>
+
+  <p>{{ tool.description }}</p>
+
+  {% for input in tool.inputs %}
+    <input
+      type="{{ input.type }}"
+      id="{{ input.id }}"
+      placeholder="{{ input.placeholder }}"
+    >
+  {% endfor %}
+
+  <button onclick="{{ tool.button.action }}()">
+    {{ tool.button.text }}
+  </button>
+
+  <div id="{{ tool.output.id }}"></div>
+
+  <details>
+    <summary>View Code</summary>
+
+    <div class="code-tabs">
+      {% for item in langs %}
+        {% assign lang = base[item.file] %}
+        <button onclick="showCode('{{ tool_id }}','{{ lang.id }}')">
+          {{ lang.lang }}
+        </button>
+      {% endfor %}
+    </div>
+
+    {% for item in langs %}
+      {% assign lang = base[item.file] %}
+      <pre id="{{ tool_id }}-code-{{ lang.id }}"
+           {% unless forloop.first %}hidden{% endunless %}>
+<code>
+{% for line in lang.code %}
+{{ line }}
+{% endfor %}
+</code>
+      </pre>
+    {% endfor %}
+
+  </details>
+
+</div>
